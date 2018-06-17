@@ -12,4 +12,5 @@ struct Status: Decodable {
     
     var text: String?
     var user: User?
+    var created_at: String?
 }

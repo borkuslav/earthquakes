@@ -38,9 +38,15 @@
 		A9E6688920D67BA7009398EF /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6688820D67BA7009398EF /* Status.swift */; };
 		A9E6688B20D68C6E009398EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6688A20D68C6E009398EF /* User.swift */; };
 		A9E6688D20D68E06009398EF /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6688C20D68E06009398EF /* TweetTableViewCell.swift */; };
-		A9E6689420D68E79009398EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E6688E20D68E79009398EF /* Main.storyboard */; };
-		A9E6689520D68E79009398EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E6689020D68E79009398EF /* LaunchScreen.storyboard */; };
-		A9E6689620D68E79009398EF /* EarthquakeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E6689220D68E79009398EF /* EarthquakeTableViewCell.xib */; };
+		A9E6689E20D68F0D009398EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E6689820D68F0D009398EF /* Main.storyboard */; };
+		A9E6689F20D68F0D009398EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E6689A20D68F0D009398EF /* LaunchScreen.storyboard */; };
+		A9E668A020D68F0D009398EF /* EarthquakeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E6689C20D68F0D009398EF /* EarthquakeTableViewCell.xib */; };
+		A9E668A320D68F24009398EF /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E668A120D68F24009398EF /* TweetTableViewCell.xib */; };
+		A9E668A520D70523009398EF /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = A9E668A420D70523009398EF /* Cartfile */; };
+		A9E668A720D70605009398EF /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E668A620D70605009398EF /* Kingfisher.framework */; };
+		A9E668A820D70610009398EF /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9E668A620D70605009398EF /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9E668AA20D70D03009398EF /* TweetsListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E668A920D70D03009398EF /* TweetsListHeaderView.xib */; };
+		A9E668AC20D71211009398EF /* TweetsListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E668AB20D71211009398EF /* TweetsListHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +77,7 @@
 				A9E6688220D67541009398EF /* TwitterCore.framework in CopyFiles */,
 				A9E6688320D67541009398EF /* TwitterKit.framework in CopyFiles */,
 				A9E6688420D67541009398EF /* TwitterShareExtensionUI.framework in CopyFiles */,
+				A9E668A820D70610009398EF /* Kingfisher.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,9 +118,14 @@
 		A9E6688820D67BA7009398EF /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		A9E6688A20D68C6E009398EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A9E6688C20D68E06009398EF /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
-		A9E6688F20D68E79009398EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EarthquakesDemo/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		A9E6689120D68E79009398EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EarthquakesDemo/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		A9E6689320D68E79009398EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = EarthquakesDemo/Base.lproj/EarthquakeTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		A9E6689920D68F0D009398EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EarthquakesDemo/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		A9E6689B20D68F0D009398EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EarthquakesDemo/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		A9E6689D20D68F0D009398EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = EarthquakesDemo/Base.lproj/EarthquakeTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		A9E668A220D68F24009398EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = EarthquakesDemo/Base.lproj/TweetTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		A9E668A420D70523009398EF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		A9E668A620D70605009398EF /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		A9E668A920D70D03009398EF /* TweetsListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TweetsListHeaderView.xib; path = Carthage/Build/iOS/TweetsListHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		A9E668AB20D71211009398EF /* TweetsListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsListHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E668A720D70605009398EF /* Kingfisher.framework in Frameworks */,
 				A9E6687F20D67537009398EF /* TwitterCore.framework in Frameworks */,
 				A9E6688020D67537009398EF /* TwitterKit.framework in Frameworks */,
 				A9E6688120D67537009398EF /* TwitterShareExtensionUI.framework in Frameworks */,
@@ -169,9 +182,10 @@
 		A9E6681520D40243009398EF /* EarthquakesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A9E668A420D70523009398EF /* Cartfile */,
+				A9E6689720D68EFD009398EF /* Views */,
 				A9E6686820D5B224009398EF /* Extensions */,
 				A9E6686520D5AB6D009398EF /* Other */,
-				A9E6686220D5945F009398EF /* Views */,
 				A9E6685320D55F0D009398EF /* Modules */,
 				A9E6684A20D418E6009398EF /* Services */,
 				A9E6684420D41514009398EF /* Models */,
@@ -217,6 +231,7 @@
 		A9E6684720D418D6009398EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9E668A620D70605009398EF /* Kingfisher.framework */,
 				A9E6687C20D67537009398EF /* TwitterCore.framework */,
 				A9E6687D20D67537009398EF /* TwitterKit.framework */,
 				A9E6687E20D67537009398EF /* TwitterShareExtensionUI.framework */,
@@ -253,16 +268,6 @@
 			path = EarthquakesList;
 			sourceTree = "<group>";
 		};
-		A9E6686220D5945F009398EF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A9E6689220D68E79009398EF /* EarthquakeTableViewCell.xib */,
-				A9E6689020D68E79009398EF /* LaunchScreen.storyboard */,
-				A9E6688E20D68E79009398EF /* Main.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		A9E6686520D5AB6D009398EF /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,8 +301,21 @@
 				A9E6687820D6693A009398EF /* TweetsListViewController.swift */,
 				A9E6687A20D6699B009398EF /* TweetsListViewModel.swift */,
 				A9E6688C20D68E06009398EF /* TweetTableViewCell.swift */,
+				A9E668AB20D71211009398EF /* TweetsListHeaderView.swift */,
 			);
 			path = TweetsList;
+			sourceTree = "<group>";
+		};
+		A9E6689720D68EFD009398EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9E6689C20D68F0D009398EF /* EarthquakeTableViewCell.xib */,
+				A9E6689A20D68F0D009398EF /* LaunchScreen.storyboard */,
+				A9E6689820D68F0D009398EF /* Main.storyboard */,
+				A9E668A120D68F24009398EF /* TweetTableViewCell.xib */,
+				A9E668A920D70D03009398EF /* TweetsListHeaderView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,10 +423,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9E6689520D68E79009398EF /* LaunchScreen.storyboard in Resources */,
+				A9E668AA20D70D03009398EF /* TweetsListHeaderView.xib in Resources */,
+				A9E668A520D70523009398EF /* Cartfile in Resources */,
+				A9E668A320D68F24009398EF /* TweetTableViewCell.xib in Resources */,
+				A9E6689F20D68F0D009398EF /* LaunchScreen.storyboard in Resources */,
 				A9E6681E20D40245009398EF /* Assets.xcassets in Resources */,
-				A9E6689620D68E79009398EF /* EarthquakeTableViewCell.xib in Resources */,
-				A9E6689420D68E79009398EF /* Main.storyboard in Resources */,
+				A9E668A020D68F0D009398EF /* EarthquakeTableViewCell.xib in Resources */,
+				A9E6689E20D68F0D009398EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +467,7 @@
 				A9E6687B20D6699B009398EF /* TweetsListViewModel.swift in Sources */,
 				A9E6685820D55F31009398EF /* EarthquakesViewController.swift in Sources */,
 				A9E6688720D678EB009398EF /* SearchResponse.swift in Sources */,
+				A9E668AC20D71211009398EF /* TweetsListHeaderView.swift in Sources */,
 				A9E6686020D59401009398EF /* EarthquakeTableViewCell.swift in Sources */,
 				A9E6685E20D56586009398EF /* Period.swift in Sources */,
 				A9E6687620D65BD9009398EF /* UIView+Extensions.swift in Sources */,
@@ -488,28 +510,36 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A9E6688E20D68E79009398EF /* Main.storyboard */ = {
+		A9E6689820D68F0D009398EF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A9E6688F20D68E79009398EF /* Base */,
+				A9E6689920D68F0D009398EF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A9E6689020D68E79009398EF /* LaunchScreen.storyboard */ = {
+		A9E6689A20D68F0D009398EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A9E6689120D68E79009398EF /* Base */,
+				A9E6689B20D68F0D009398EF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		A9E6689220D68E79009398EF /* EarthquakeTableViewCell.xib */ = {
+		A9E6689C20D68F0D009398EF /* EarthquakeTableViewCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A9E6689320D68E79009398EF /* Base */,
+				A9E6689D20D68F0D009398EF /* Base */,
 			);
 			name = EarthquakeTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		A9E668A120D68F24009398EF /* TweetTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9E668A220D68F24009398EF /* Base */,
+			);
+			name = TweetTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

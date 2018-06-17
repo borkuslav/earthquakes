@@ -36,11 +36,10 @@ class NetworkService{
         }
     }
     
-    func fetchTweets(coordinates: [Float], completion: @escaping (SearchResponse) -> Void, failure: @escaping () -> Void) {
+    func fetchTweets(coordinates: [Float], radius: Float, completion: @escaping (SearchResponse) -> Void, failure: @escaping () -> Void) {
         
         let client = TWTRAPIClient()
-        let radius = "500km"
-        let tweetsUrl = "https://api.twitter.com/1.1/search/tweets.json?q=earthquake&geocode=\(coordinates[1]),\(coordinates[0]),\(radius)&count=30"
+        let tweetsUrl = "https://api.twitter.com/1.1/search/tweets.json?q=earthquake&geocode=\(coordinates[1]),\(coordinates[0]),\(Int(radius))km&count=100"
         let params: [String: String] = [:] //["id": "20"]
         var clientError : NSError?
         

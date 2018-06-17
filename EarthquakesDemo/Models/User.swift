@@ -10,5 +10,6 @@ import Foundation
 
 struct User: Decodable {
     
-    var name: String?    
+    var name: String?
+    var profile_image_url: String?
 }

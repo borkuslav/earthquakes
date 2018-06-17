@@ -11,5 +11,9 @@ import UIKit
 
 class TweetTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var publishedDateLabel: UILabel!
     
 }
