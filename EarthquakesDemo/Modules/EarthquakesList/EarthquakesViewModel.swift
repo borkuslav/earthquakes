@@ -26,7 +26,7 @@ class EarthquakesViewModel {
     init(earthquakesList: EarthquakesList, networkService: NetworkService) {
         self.earthquakesList = earthquakesList
         self.networkService = networkService
-        self.fetchData()
+        self.fetchData(withIndicator: true)
     }
     
     func createFiltersViewModel() -> FiltersViewModel {
@@ -41,23 +41,33 @@ class EarthquakesViewModel {
                 if (magnitude != self!.selectedMagnitude) || (period != self!.selectedPeriod) {
                     self!.selectedMagnitude = magnitude
                     self!.selectedPeriod = period
-                    self!.fetchData()
+                    self!.fetchData(withIndicator: true)
                 }
         })
     }
 
-    func fetchData() {
-        self.earthquakesList.showLoadingIndicator()
+    func fetchData(withIndicator: Bool) {
+        if withIndicator {
+            self.earthquakesList.showLoadingIndicator()
+        }
         self.networkService.fetchGeodata(
             magnitude: selectedMagnitude,
             period: selectedPeriod,
             completion: { [weak self] (geojson) in
                 self?.geojson = geojson
-                self?.earthquakesList.hideLoadingIndicator()
+                if withIndicator {
+                    self?.earthquakesList.hideLoadingIndicator()
+                }
         }) { [weak self] in
-            self?.earthquakesList.hideLoadingIndicator()
+            if withIndicator {
+                self?.earthquakesList.hideLoadingIndicator()
+            }
             // TODO: show error
         }
+    }
+    
+    func onPullDownToRefresh() {
+        self.fetchData(withIndicator: false)
     }
     
     func numberOfSections() -> Int {

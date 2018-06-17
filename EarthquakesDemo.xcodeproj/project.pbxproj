@@ -28,8 +28,6 @@
 		A9E6686C20D5C815009398EF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6686B20D5C815009398EF /* DateFormatter.swift */; };
 		A9E6686F20D5D12A009398EF /* FiltersViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6686E20D5D12A009398EF /* FiltersViewControllers.swift */; };
 		A9E6687120D5D13A009398EF /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6687020D5D13A009398EF /* FiltersViewModel.swift */; };
-		A9E6687320D65A41009398EF /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E6687220D65A40009398EF /* SkeletonView.framework */; };
-		A9E6687420D65A49009398EF /* SkeletonView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9E6687220D65A40009398EF /* SkeletonView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9E6687620D65BD9009398EF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6687520D65BD9009398EF /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +56,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A9E6685120D41983009398EF /* Alamofire.framework in CopyFiles */,
-				A9E6687420D65A49009398EF /* SkeletonView.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +88,6 @@
 		A9E6686B20D5C815009398EF /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A9E6686E20D5D12A009398EF /* FiltersViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewControllers.swift; sourceTree = "<group>"; };
 		A9E6687020D5D13A009398EF /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
-		A9E6687220D65A40009398EF /* SkeletonView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkeletonView.framework; path = Carthage/Build/iOS/SkeletonView.framework; sourceTree = "<group>"; };
 		A9E6687520D65BD9009398EF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9E6687320D65A41009398EF /* SkeletonView.framework in Frameworks */,
 				A9E6684920D418D6009398EF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +185,6 @@
 		A9E6684720D418D6009398EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A9E6687220D65A40009398EF /* SkeletonView.framework */,
 				A9E6684820D418D6009398EF /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -207,6 +201,7 @@
 		A9E6685320D55F0D009398EF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A9E6687720D6626B009398EF /* TweetsList */,
 				A9E6686D20D5D115009398EF /* Filters */,
 				A9E6685620D55F1E009398EF /* EarthquakesList */,
 			);
@@ -258,6 +253,13 @@
 				A9E6687020D5D13A009398EF /* FiltersViewModel.swift */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		A9E6687720D6626B009398EF /* TweetsList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TweetsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

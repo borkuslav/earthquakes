@@ -21,6 +21,7 @@ class EarthquakesViewController: UIViewController {
     
     private var tableView: UITableView!
     private let earthquakeCellIdentifier = "earthquakeCell"
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,16 @@ class EarthquakesViewController: UIViewController {
             forCellReuseIdentifier: earthquakeCellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshList), for: .valueChanged)
         
         createViewModel()
         self.title = viewModel.title()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: #imageLiteral(resourceName: "filter"),
+            style: .plain,
+            target: self,
+            action: #selector(filtersButtonPressed))
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,11 +57,16 @@ class EarthquakesViewController: UIViewController {
             earthquakesList: self,
             networkService: NetworkService())
     }
+    
+    @objc private func refreshList() {
+        viewModel.onPullDownToRefresh()
+    }
 }
 
 extension EarthquakesViewController: EarthquakesList {
     
     func reloadList() {
+        refreshControl.endRefreshing()
         tableView.reloadData()
     }
     
@@ -96,6 +109,7 @@ extension EarthquakesViewController: UITableViewDataSource {
         return cell
     }
     
+    /*
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = UIColor.groupTableViewBackground
@@ -116,6 +130,7 @@ extension EarthquakesViewController: UITableViewDataSource {
         button.addTarget(self, action: #selector(filtersButtonPressed), for: .touchUpInside)
         return view
     }
+     */
     
     @objc func filtersButtonPressed() {
         let filtersViewController = FiltersViewController(viewModel: viewModel.createFiltersViewModel())
