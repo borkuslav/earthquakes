@@ -84,6 +84,14 @@ extension EarthquakesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let tweetsListViewModel = viewModel.createTweetsListViewModel(forRow: indexPath.row) {
+            let tweetsListViewController = TweetsListViewController(viewModel: tweetsListViewModel)
+            self.navigationController?.pushViewController(tweetsListViewController, animated: true)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension EarthquakesViewController: UITableViewDataSource {

@@ -20,6 +20,6 @@ enum Period: String {
     }
     
     static var defaultPeriod: Period {
-        return .month
+        return .week
     }
 }

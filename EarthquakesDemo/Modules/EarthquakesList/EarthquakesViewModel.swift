@@ -45,6 +45,13 @@ class EarthquakesViewModel {
                 }
         })
     }
+    
+    func createTweetsListViewModel(forRow row: Int) -> TweetsListViewModel? {
+        guard let coordinates = self.geojson?.features?[row].geometry?.coordinates, coordinates.count >= 2 else {
+            return nil
+        }
+        return TweetsListViewModel(coordinates: coordinates, networkService: NetworkService())
+    }
 
     func fetchData(withIndicator: Bool) {
         if withIndicator {

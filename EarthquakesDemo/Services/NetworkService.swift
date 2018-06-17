@@ -11,6 +11,8 @@ import Alamofire
 
 class NetworkService{
     
+    let twitterApiClient = TWTRAPIClient()
+    
     func fetchGeodata(magnitude: Magnitude, period: Period, completion: @escaping (Geojson) -> Void, failure: @escaping () -> Void) {
         
         let url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/\(magnitude.type)_\(period).geojson"
@@ -31,6 +33,31 @@ class NetworkService{
                     failure()
                     break
                 }
+        }
+    }
+    
+    func fetchTweets(coordinates: [Float], completion: @escaping (SearchResponse) -> Void, failure: @escaping () -> Void) {
+        
+        let client = TWTRAPIClient()
+        let radius = "500km"
+        let tweetsUrl = "https://api.twitter.com/1.1/search/tweets.json?q=earthquake&geocode=\(coordinates[1]),\(coordinates[0]),\(radius)&count=30"
+        let params: [String: String] = [:] //["id": "20"]
+        var clientError : NSError?
+        
+        let request = client.urlRequest(withMethod: "GET", urlString: tweetsUrl, parameters: params, error: &clientError)
+        
+        client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
+            guard let data = data, connectionError == nil else {
+                failure()
+                return
+            }
+            
+            guard let res = try? JSONDecoder().decode(SearchResponse.self, from: data) else {
+                failure()
+                return
+            }
+            
+            completion(res)
         }
     }
 }
