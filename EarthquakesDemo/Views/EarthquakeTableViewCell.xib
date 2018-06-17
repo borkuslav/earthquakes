@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="earthquakeCell" rowHeight="99" id="sH6-yH-ycO" customClass="EarthquakeTableViewCell" customModule="EarthquakesDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sH6-yH-ycO" id="azU-B7-27H">
+                <rect key="frame" x="0.0" y="0.0" width="481" height="98.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQy-VV-KFt">
+                        <rect key="frame" x="20" y="20" width="65.5" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqM-bK-i4b">
+                        <rect key="frame" x="422" y="33.5" width="39" height="31.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                        <color key="textColor" red="1" green="0.36072347259999998" blue="0.41535043399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.06.2017 16:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caV-ue-8yz">
+                        <rect key="frame" x="20" y="48.5" width="129" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="caV-ue-8yz" secondAttribute="bottom" constant="20" symbolic="YES" id="0nr-dy-1Fg"/>
+                    <constraint firstItem="RqM-bK-i4b" firstAttribute="centerY" secondItem="azU-B7-27H" secondAttribute="centerY" id="DCH-cl-2d8"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RqM-bK-i4b" secondAttribute="bottom" constant="20" symbolic="YES" id="GFE-rU-2LI"/>
+                    <constraint firstItem="caV-ue-8yz" firstAttribute="leading" secondItem="HQy-VV-KFt" secondAttribute="leading" id="GW4-G1-nNh"/>
+                    <constraint firstItem="RqM-bK-i4b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HQy-VV-KFt" secondAttribute="trailing" constant="8" symbolic="YES" id="JRe-Z6-t5C"/>
+                    <constraint firstItem="caV-ue-8yz" firstAttribute="top" secondItem="HQy-VV-KFt" secondAttribute="bottom" constant="8" symbolic="YES" id="SZU-NE-ufi"/>
+                    <constraint firstItem="HQy-VV-KFt" firstAttribute="leading" secondItem="azU-B7-27H" secondAttribute="leading" constant="20" id="chP-uQ-uzV"/>
+                    <constraint firstAttribute="trailing" secondItem="RqM-bK-i4b" secondAttribute="trailing" constant="20" id="fkf-1L-O0f"/>
+                    <constraint firstItem="HQy-VV-KFt" firstAttribute="top" secondItem="azU-B7-27H" secondAttribute="top" constant="20" symbolic="YES" id="fu9-3l-2Gr"/>
+                    <constraint firstItem="RqM-bK-i4b" firstAttribute="top" relation="greaterThanOrEqual" secondItem="azU-B7-27H" secondAttribute="top" constant="20" symbolic="YES" id="g9i-FV-sMT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locationLabel" destination="HQy-VV-KFt" id="fah-hX-YxN"/>
+                <outlet property="magnitudeLabel" destination="RqM-bK-i4b" id="rrS-nf-LrT"/>
+                <outlet property="timeLabel" destination="caV-ue-8yz" id="LYS-wM-yi5"/>
+            </connections>
+            <point key="canvasLocation" x="-74.5" y="37.5"/>
+        </tableViewCell>
+    </objects>
+</document>

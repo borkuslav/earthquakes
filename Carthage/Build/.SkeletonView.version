@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.2.1",
+  "iOS" : [
+    {
+      "name" : "SkeletonView",
+      "hash" : "00503c5a0b6e0f2d828be8d7f10dcb23e354d66f51eae366b2ffba7422a70ef4"
+    }
+  ]
+}
