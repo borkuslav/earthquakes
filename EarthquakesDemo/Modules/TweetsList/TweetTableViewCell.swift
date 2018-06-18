@@ -15,5 +15,11 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var publishedDateLabel: UILabel!
-    
+ 
+    override func prepareForReuse() {
+        self.userImageView.image = nil
+        self.usernameLabel.text = nil
+        self.tweetTextLabel.text = nil
+        self.publishedDateLabel.text = nil
+    }
 }

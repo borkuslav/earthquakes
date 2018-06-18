@@ -9,7 +9,12 @@
 import Foundation
 import Alamofire
 
-class NetworkService{
+protocol ApiClient {
+    func fetchGeodata(magnitude: Magnitude, period: Period, completion: @escaping (Geojson) -> Void, failure: @escaping () -> Void)
+    func fetchTweets(coordinates: [Float], radius: Float, completion: @escaping (SearchResponse) -> Void, failure: @escaping () -> Void)
+}
+
+class NetworkService: ApiClient{
     
     func fetchGeodata(magnitude: Magnitude, period: Period, completion: @escaping (Geojson) -> Void, failure: @escaping () -> Void) {
         

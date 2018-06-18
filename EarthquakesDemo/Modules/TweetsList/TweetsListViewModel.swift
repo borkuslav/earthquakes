@@ -14,7 +14,7 @@ class TweetsListViewModel {
     
     private var coordinates: [Float]!
     private var location: String!
-    private var networkService: NetworkService!
+    private var apiClient: ApiClient!
     
     private static var radius: Float = 100
     
@@ -24,10 +24,10 @@ class TweetsListViewModel {
         }
     }
     
-    init(coordinates: [Float], location: String, networkService: NetworkService) {
+    init(coordinates: [Float], location: String, apiClient: ApiClient) {
         self.coordinates = coordinates
         self.location = location
-        self.networkService = networkService
+        self.apiClient = apiClient
     }
     
     func title() -> String{
@@ -36,7 +36,7 @@ class TweetsListViewModel {
     
     func fetchTweets() {
         tweetsList.showLoadingIndicator()
-        networkService.fetchTweets(coordinates: coordinates, radius: getRadius(), completion: { [weak self] (response) in
+        apiClient.fetchTweets(coordinates: coordinates, radius: getRadius(), completion: { [weak self] (response) in
             self?.searchResponse = response
             self?.tweetsList.hideLoadingIndicator()
         }, failure: { [weak self] in
@@ -104,6 +104,6 @@ class TweetViewModel {
     }
     
     func userImageUrl() -> String? {
-        return status.user?.profile_image_url?.replacingOccurrences(of: "http://", with: "https://")
+        return status.user?.profile_image_url
     }
 }

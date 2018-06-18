@@ -70,10 +70,11 @@ extension TweetsListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.tweetTextLabel.text = tweetViewModel.text()
         cell.publishedDateLabel.text = tweetViewModel.date()
         if let imageUrlString = tweetViewModel.userImageUrl(), let url = URL(string: imageUrlString) {
-            cell.userImageView.kf.setImage(with: url) { (image, error, cache, url) in
+            cell.userImageView.kf.setImage(with: url, placeholder: UIImage(named: "user")) { (image, error, cache, url) in
               
             }
         }
+        cell.selectionStyle = .none
         return cell
     }
     

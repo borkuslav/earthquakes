@@ -21,11 +21,11 @@ class EarthquakesViewModel {
     
     private weak var earthquakesList: EarthquakesList!
     
-    private var networkService : NetworkService!
+    private var apiClient : ApiClient!
     
-    init(earthquakesList: EarthquakesList, networkService: NetworkService) {
+    init(earthquakesList: EarthquakesList, networkService: ApiClient) {
         self.earthquakesList = earthquakesList
-        self.networkService = networkService
+        self.apiClient = networkService
         self.fetchData(withIndicator: true)
     }
     
@@ -52,14 +52,14 @@ class EarthquakesViewModel {
             let place = feature.properties?.place else {
             return nil
         }
-        return TweetsListViewModel(coordinates: coordinates, location: place, networkService: NetworkService())
+        return TweetsListViewModel(coordinates: coordinates, location: place, apiClient: NetworkService())
     }
 
     func fetchData(withIndicator: Bool) {
         if withIndicator {
             self.earthquakesList.showLoadingIndicator()
         }
-        self.networkService.fetchGeodata(
+        self.apiClient.fetchGeodata(
             magnitude: selectedMagnitude,
             period: selectedPeriod,
             completion: { [weak self] (geojson) in
