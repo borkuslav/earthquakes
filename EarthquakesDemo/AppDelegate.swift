@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         TWTRTwitter.sharedInstance().start(
-            withConsumerKey: "YuWYKffzutMAZ1ts7SKdEfbL8",
-            consumerSecret: "kgw99WceezQeyV6XZ0aAizFznaLvF4G81AA0bNaD1m1jChs6fZ")
+            withConsumerKey: "KEY",
+            consumerSecret: "SECRET")
         return true
     }
 
